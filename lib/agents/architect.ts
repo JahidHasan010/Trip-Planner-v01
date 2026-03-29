@@ -124,7 +124,8 @@ If you do not generate all ${totalDays} days, the user will be stranded.
 
   try {
     const response = await openai.chat.completions.create({
-      model: 'gpt-4o',
+      // model: 'gpt-4o', # it takes so much ammonut
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt },
