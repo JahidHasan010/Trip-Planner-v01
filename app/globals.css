@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vacai-blue: #1d4ed8;
+  --vacai-gold: #fbbf24;
+  --vacai-bg: #f3f4f6;
+}
+
+body {
+  background-color: var(--vacai-bg);
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[var(--vacai-blue)] focus:border-[var(--vacai-blue)] outline-none transition-all shadow-inner bg-white;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold text-white bg-[var(--vacai-blue)] hover:bg-[#1e40af] focus:ring-4 focus:ring-blue-300 transition-all shadow-xl shadow-blue-500/40 disabled:bg-gray-400 disabled:shadow-none;
+}
+
+.result-card-bg {
+  @apply bg-white p-6 md:p-8 rounded-3xl shadow-2xl border border-gray-200 h-full;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.animate-float {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.itinerary-list li {
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.75;
+}
+.itinerary-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.8rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: var(--vacai-gold);
+  border-radius: 9999px;
+  border: 2px solid var(--vacai-blue);
+  z-index: 1;
+}
+.itinerary-list {
+  border-left: 2px solid #e5e7eb;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* .header-bg {
+  background: linear-gradient(rgba(18, 75, 234, 0.85), rgba(111, 132, 202, 0.85)),
+    url("https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80")
+      no-repeat center center;
+  background-size: cover;
+} */
+
+
+body {
+  height: 100vh; /* full screen height */
+  margin: 0;
+  background:
+    /* url("https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80") */
+    url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed; /* keeps it static on scroll */
+  
+}
