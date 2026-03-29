@@ -277,7 +277,7 @@ export default function TripForm({
             <motion.div key="step3" variants={stepVariants} initial="hidden" animate="visible" exit="exit" className="space-y-6">
               <div className="space-y-2">
                 <h3 className="text-2xl font-black text-gray-900 tracking-tight">Tailor your soul.</h3>
-                <p className="text-gray-500 text-sm">Select interests to help AI craft your perfect itinerary.</p>
+                <p className="text-gray-500 text-sm">Select interests to craft your perfect itinerary.</p>
               </div>
 
               <div className="space-y-4">
